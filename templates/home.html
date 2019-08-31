@@ -1,0 +1,195 @@
+{% extends 'base.html' %}
+{% block title%} {{settings.title}} {%endblock%}
+{% block body %}
+{% load static%}
+{% include 'partials/head.html' %}
+
+
+<span></span>
+<div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="local-brands"><br><br>
+        <div class="title-style-1">
+          <h2>Documents</h2>
+          <p>Ministry of Budget and Planning,Borno State Government </p>
+        </div>
+        <div class="row">
+
+       
+<!--home-content-top starts from here-->
+<section class="home-content-top">
+  <div class="container">
+    
+    <!--our-quality-shadow-->
+    <div class="clearfix"></div>
+  
+    <div class="tabbable-panel margin-tops4 ">
+      <div class="tabbable-line">
+        <ul class="nav nav-tabs tabtop  tabsetting">
+          <li class="active"> <a href="#tab_default_1" data-toggle="tab"> 2019 Budget </a> </li>
+          <li> <a href="#tab_default_2" data-toggle="tab">2018 Budget</a> </li>
+          <li> <a href="#tab_default_3" data-toggle="tab">2017 Budget</a> </li>
+        
+        </ul>
+        <div class="tab-content margin-tops">
+          <div class="tab-pane active fade in" id="tab_default_1">
+            <br><br>
+            <div class="col-md-8 col-sm-6">
+              <ul class="lb-ser-box">
+                {% for document in budget2019 %}
+  
+                <li> <span class="lb-icon"><img src="{% static "images/local-icon5.png" %}" alt=""></span>
+                  <h6>{{document.file_title|title}}</h6>
+                  <p>Click on the link below</p>
+                  <div class="single-post-tags pull-right"> <a href="download/{{document.id}}">View Document</a> </div>
+  
+                </li>
+  
+                {% endfor %}
+         
+                <a href="/documents" class="btn btn-success">VEW ALL DOCUMENTS</a>
+                <br><br>
+              </ul>
+  
+            </div>
+          </div>
+          <div class="tab-pane fade" id="tab_default_2">
+        <br><br>
+            <div class="col-md-8 col-sm-6">
+              <ul class="lb-ser-box">
+                {% for document in budget2018 %}
+  
+                <li> <span class="lb-icon"><img src="{% static "images/local-icon5.png" %}" alt=""></span>
+                  <h6>{{document.file_title|title}}</h6>
+                  <p>Click on the link below</p>
+                  <div class="single-post-tags pull-right"> <a href="download/{{document.id}}">View Document</a> </div>
+  
+                </li>
+  
+                {% endfor %}
+         
+                <a href="/documents" class="btn btn-success">VEW ALL DOCUMENTS</a>
+                <br><br>
+              </ul>
+  
+            </div>
+          </div>
+          <div class="tab-pane fade" id="tab_default_3">
+          
+            <br><br>
+            <div class="col-md-8 col-sm-6">
+              <ul class="lb-ser-box">
+                {% for document in budget2017 %}
+  
+                <li> <span class="lb-icon"><img src="{% static "images/local-icon5.png" %}" alt=""></span>
+                  <h6>{{document.file_title|title}}</h6>
+                  <p>Click on the link below</p>
+                  <div class="single-post-tags pull-right"> <a href="download/{{document.id}}">View Document</a> </div>
+  
+                </li>
+  
+                {% endfor %}
+         
+                <a href="/documents" class="btn btn-success">VEW ALL DOCUMENTS</a>
+                <br><br>
+              </ul>
+  
+            </div>
+          </div>
+          <div class="tab-pane fade" id="tab_default_4">
+          
+            <div class="col-md-8">
+              <h4 class="heading4">OpenCart Product Upload</h4>
+              <p>Are you looking for someone who could upload products on your Magento based website? At webenlance India, we can effectively help you with our top quality Magento product upload services. With the pool of well experienced and talented experts, we ensure that your customers have an enriching experience every time they visit your website. Our comprehensive range of services is available all over the globe at extremely low cost. </p>
+              <h4 class="heading4">OpenCart Product Upload</h4>
+              <p>Also a data entry company from India, we provide time-bound and high-quality data entry services and encourage our clients to outsource end-to-end data entry projects to us. </p>
+              <a href="#">
+              <div class="btns">View More <i class="fa fa-angle-right"></i></div>
+              </a> </div>
+          </div>
+          <div class="tab-pane fade" id="tab_default_5">
+            <div class="col-md-4">
+              <div class="row"> <img src="http://placemi.com/petnp/500x300" class="img-responsive"> </div>
+            </div>
+            <div class="col-md-8">
+              <h4 class="heading4">Amazon Product Listing </h4>
+              <p>Are you looking for someone who could upload products on your Magento based website? At webenlance India, we can effectively help you with our top quality Magento product upload services. With the pool of well experienced and talented experts, we ensure that your customers have an enriching experience every time they visit your website. Our comprehensive range of services is available all over the globe at extremely low cost. </p>
+              <h4 class="heading4">Amazon Product Listing</h4>
+              <p>Also a data entry company from India, we provide time-bound and high-quality data entry services and encourage our clients to outsource end-to-end data entry projects to us. </p>
+              <a href="#">
+              <div class="btns">View More <i class="fa fa-angle-right"></i></div>
+              </a> </div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+          
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4">
+      <br><br><br><br><br> <br><br><br><br><br>
+      <div class="Mayor-msg">
+        <div class="Mayor-thumb"><img src="{{g_speech.image_data.url}}" alt=""> <span class="Mayor-sig"><img
+              src="images/mayer-signature.png" alt=""></span> </div>
+        <div class="Mayor-text"> <span>Speech from the</span>
+          <h5>Governor</h5>
+
+          <center><a href="/download/{{g_speech.id}}">Readmore...</a></center>
+        </div>
+      </div>
+
+      <!--Mayor Msg End-->
+    </div>
+
+
+  </div>
+</div>
+
+</div>
+<section class="wf100 p80 city-highlights ">
+  <div class="container">
+    <div class="title-style-1 text-center white-text">
+      <h2>Works</h2>
+
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div id="highlight-slider" class="owl-carousel owl-theme owl-loaded owl-drag">
+
+      <div class="owl-stage-outer">
+        <div class="owl-stage"
+          style="transform: translate3d(-757px, 0px, 0px); transition: all 0.18s ease 0s; width: 2273px;">
+          {% for work in works%}
+          <div class="owl-item" style="width: 373.75px; margin-right: 5px;">
+            <div class="item">
+              <div class="ch-box">
+                <div class="ch-thumb"> <a href="#"><i class="fa fa-image"></i></a> <img src="{{work.work_image.url}}"
+                    alt=""> </div>
+                <div class="ch-txt">
+                  <h6 style="color:white">{{work.work_title|upper}}</h6>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {% endfor%}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+

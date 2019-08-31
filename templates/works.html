@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title%} {{settings.title}} {%endblock%}
+{% block body %}
+{% load static%}
+
+
+<div class="container">
+        <div class="row" >
+
+            
+                           {% for work in works%}
+                             <div class="col-md-4 col-sm-6">
+                                <div class="news-box">
+                                   <div class="new-thumb">
+                                    <img src="{{work.work_image.url}}" alt="">
+                                     
+                                   </div>
+                                   <div class="new-txt">
+                                 
+                                    
+                                   </div>
+                                 
+                                </div>
+                             </div>
+                             <!--News Box End--> 
+                             {% endfor %}
+                          </div>
+        <br><br>
+        </div>
+
+{% endblock %}

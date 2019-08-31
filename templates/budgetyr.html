@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title%} {{settings.title}} {%endblock%}
+{% block body %}
+{% load static%}
+
+
+<section class="wf100 subheader">
+        <div class="container">
+           <h2>Documents</h2>
+          <p>Available Downloads</p>
+        </div>
+     </section>
+
+     <div class="container">
+     <div class="row"> 
+            {% for document in documents %}    
+            <!--Local Service Box Start-->
+            <div class="col-md-12 col-sm-6">
+              <ul class="lb-ser-box">
+                  <!--Start-->
+                <li> <span class="lb-icon"><img src="{% static "images/local-icon5.png" %}" style="height: 50px;padding-top:10px;" alt=""></span>
+                  <h6>{{document.file_title|title}}</h6>
+                  <p>Click on the link below</p>
+                  <div class="single-post-tags pull-right"> <a href="/download/{{document.id}}">View  Document</a>  </div>
+                </li>
+                <!--End--> 
+              
+                    
+              </ul>
+            </div>
+            <!--Local Service Box End--> 
+            
+            {% endfor %}
+            
+          </div>
+     </div>
+<br><br>
+{% endblock %}

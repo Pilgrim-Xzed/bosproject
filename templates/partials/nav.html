@@ -1,0 +1,72 @@
+
+<header class="wf100 header mb-5">
+    <div class="topbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+  
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <ul class="right-links">
+  
+              <li> <a href="#"><i class="fa fa-map"></i>{{settings.address}}</a> </li>
+              <li> <a href="#"><i class="fa fa-envelope"></i> <strong>{{settings.email}}</strong></a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="logo-nav-row">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <nav class="navbar">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                  data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle
+                    navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span> </button>
+                <a class="navbar-brand" href="index.html"><img src="{{settings.logo.url}}" style="height:100px"
+                    alt=""></a> </div>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+  
+                  <li><a href="/">HOME</a></li>
+                  <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Documents <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      {% for year in years%}
+                      <li><a href="/budget/{{year.id}}">{{year.desc}}</a></li>
+                      {% endfor %}
+                     
+                    </ul>
+                  </li>
+                  <li><a href="/works">WORKS</a></li>
+                  <li><a href="/publications">PUBLICATIONS</a></li>
+                  <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Departments <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        {% for category in categories%}
+                        <li><a href="">{{category.name}}</a></li>
+                        {% endfor %}
+                       
+                      </ul>
+                    </li>
+                  <li class="bars-btn"><a href="#" id="sidebarCollapse"><i class="fa fa-bars"
+                        style="font-size:24px;"></i> </a></li>
+                </ul>
+                <div id="search">
+                  <button type="button" class="close">×</button>
+                  <form class="search-overlay-form">
+                    <input type="search" value="" placeholder="type keyword(s) here" />
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+                  </form>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </header>
+  
